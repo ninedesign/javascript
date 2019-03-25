@@ -76,6 +76,6 @@ html {
    <a class="next" href="#">></a>
    </div>
 </div>
-
+<script src="vanilla-js-slider.js"></script>
 </body>
 </html>
