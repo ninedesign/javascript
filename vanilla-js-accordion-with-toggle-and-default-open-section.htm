@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Toggle Accordion</title>
+
+    <style>
+        body {
+            font-size: 80%;
+            font-family: Verdana, Arial, Sans-Serif;
+        }
+
+        .accordionItem h2 {
+            margin: 0;
+            font-size: 1.1em;
+            padding: 0.4em;
+            color: #fff;
+            background-color: #944;
+            border-bottom: 1px solid #66d;
+        }
+
+        .accordionItem h2:hover {
+            cursor: pointer;
+        }
+
+        .accordionItem div {
+            margin: 0;
+            padding: 1em 0.4em;
+            background-color: #eef;
+            border-bottom: 1px solid #66d;
+        }
+
+        .accordionItem.hide h2 {
+            color: #000;
+            background-color: #88f;
+        }
+
+        .accordionItem.hide div {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <h1>JavaScript Toggle Accordion</h1>
+
+    <div class="accordionItem">
+        <h2>Section 1</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+    <div class="accordionItem">
+        <h2>Section 2 with list</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            <ul>
+                <li>List item #1</li>
+                <li>List item #2</li>
+                <li>List item #3</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="accordionItem">
+        <h2>Section 3</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+    <script>
+        var accordionItems = new Array();
+
+        function init() {
+
+            // Grab the accordion items from the page
+            var divs = document.getElementsByTagName('div');
+            for (var i = 0; i < divs.length; i++) {
+                if (divs[i].className == 'accordionItem') accordionItems.push(divs[i]);
+            }
+
+            // Assign onclick events to the accordion item headings
+            for (var i = 0; i < accordionItems.length; i++) {
+                var h2 = getFirstChildWithTagName(accordionItems[i], 'H2');
+                h2.onclick = toggleItem;
+            }
+
+            // Hide all accordion item bodies except the first
+            for (var i = 1; i < accordionItems.length; i++) {
+                accordionItems[i].className = 'accordionItem hide';
+            }
+        }
+
+        function toggleItem() {
+            var itemClass = this.parentNode.className;
+
+            // Hide all items
+            for (var i = 0; i < accordionItems.length; i++) {
+                accordionItems[i].className = 'accordionItem hide';
+            }
+
+            // Show this item if it was previously hidden
+            if (itemClass == 'accordionItem hide') {
+                this.parentNode.className = 'accordionItem';
+            }
+        }
+
+        function getFirstChildWithTagName(element, tagName) {
+            for (var i = 0; i < element.childNodes.length; i++) {
+                if (element.childNodes[i].nodeName == tagName) return element.childNodes[i];
+            }
+        }
+    </script>
+
+</body>
+
+</html>
