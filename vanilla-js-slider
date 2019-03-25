@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Vanilla JS Slider</title>
+<style>
+body,
+html {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   background: oldlace;
+   font-family: sans-serif;
+}
+.gallery {
+   width: 80%;
+   margin: 10px auto;
+   text-align: center;
+   position: relative;
+}
+.gallery .buttons {
+   position: absolute;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   top: 50%;
+   font-size: 3em;
+   font-weight: bold;
+}
+.gallery a {
+  font-family: "FontAwesome";
+   text-decoration: none;
+   color: black;
+}
+.gallery a:hover {
+   color: #4d4d4d;
+}
+.gallery .photos {
+   position: relative;
+   height: 400px;
+}
+.gallery .block {
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   opacity: 0;
+   transition: opacity 1s;
+}
+.gallery .block.active {
+   opacity: 1;
+}
+.block-1 {
+   background: lightcoral;
+}
+.block-2 {
+   background: teal;
+}
+.block-3 {
+   background: orchid;
+}
+</style>
+</head>
+
+<body>
+<div class="gallery">
+   <h1>Responsive Vanilla Javascript Slider</h1>
+   <div class="photos">
+      <div class="block block-1 active">1</div>
+      <div class="block block-2">2 </div>
+      <div class="block block-3">3</div>
+   </div>
+   <div class="buttons">
+   <a class="prev" href="#"><</a>
+   <a class="next" href="#">></a>
+   </div>
+</div>
+
+</body>
+</html>
