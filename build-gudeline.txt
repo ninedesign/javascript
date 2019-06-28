@@ -1,0 +1,25 @@
+Phase 1 - Identify the project destination/goals
+
+Phase 2 - Identify and describe all functionality (what's possible)
+
+Phase 3 - Wire-frame all aspects of functionality
+
+Phase 4 - Define all the technologies needed to make the functionalities
+
+Phase 5 - Set the workflow and the developer tools
+
+Phase 6 - First round of development - skeleton HTML
+
+Phase 7 - Review of accomplishments / revisions
+
+Phase 8 - Identify and assign technologies to each component needed
+
+Phase 9 > n - Develop each component and assemble app first draft
+
+Each component needs a review and revisions
+
+App second draft review and revision (testing)
+
+App third to complete
+
+Don't forget we are building a proof of concept.
