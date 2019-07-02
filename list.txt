@@ -1,0 +1,54 @@
+Build an application that facilitates and streamlines the workflow of 
+ * accessibility specialists and developers
+
+ How?
+
+1 scrape/parse target website returning a list of all elements to be evaluated by the 
+    automated software.
+
+2 report/list is generated of found issues (about 30% of actual issues).
+
+3 also return a checklist of the exsisting elements that might have issues based on comparison to a proprietery checklist.
+    (may or may not include issues already found by automated software)
+
+4 click issue will show problem code in app. Inject anchor in webpage to matching(?).
+
+5 have a report that includes wcag 508 guidelines.
+
+
+ Issues:
+
+    From automated software:
+        1
+        2
+        3
+        4
+
+
+    From checklist:
+
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        0
+
+
+Notes:
+
+Filterable/sortable results?
+
+Access by roles?
+
+Issue status? 
+
+Issue severity level?
+
+Capability for annotations?
+
+Capability to mark issue as resolved issue in list?
